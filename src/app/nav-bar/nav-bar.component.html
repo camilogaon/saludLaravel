@@ -1,0 +1,75 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary px-5">
+    <div class="container-fluid">
+      <a class="navbar-brand text-primary fw-bold" [routerLink]="['inicio']" href="#">Salud A Tu Puerta</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-3 fs-5" aria-current="page" routerLinkActive="active" [routerLink]="['inicio']">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fs-5" routerLinkActive="active" [routerLink]="['servicios']">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fs-5" routerLinkActive="active" [routerLink]="['nosotros']">Nosotros</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link px-3 fs-5" routerLinkActive="active" [routerLink]="['login']">Prueba</a>
+          </li> -->
+        </ul>
+  
+        <form class="d-flex" role="search">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold fs-5" routerLink="carrito"><i class="bi bi-cart"></i></a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-success me-3 " data-bs-toggle="modal" data-bs-target="#buttonIniciar" *ngIf=!loggedIn>
+            Iniciar Sesion
+          </button>
+          <button type="submit" class="btn btn-primary" href="#" (click)="logout($event)" *ngIf=loggedIn>Cerrar sesion</button>
+          
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <div class="modal fade" id="buttonIniciar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">      
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-header">
+            <h1 class="bd-title mb-0" id="content">Bienvenido</h1> <br>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form #loginForm=ngForm (ngSubmit)="onSubmit()">
+          <div class="alert alert-danger" [hidden]="!error">
+            {{error}}
+          </div>
+          <input type="email" name="email" class="form-control mb-3" placeholder="Correo electronico"  [(ngModel)]="form.email" required>
+          <input type="password" name="password" id="inputPassword6" placeholder="Contraseña" class="form-control mb-3"[(ngModel)]="form.password" required>
+          <p>¿No tienes una cuenta? <b><a id="bottonRegistrarse" [routerLink]="['registrarse']">Registrate aqui</a></b></p>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid" >Iniciar sesion</button>
+
+          </div>
+        </form>
+        
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <script src="funciones.js"></script>
+
+

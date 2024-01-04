@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="mb-3">
+        <label for="articletitle" class="form-label">Id Vacuna</label>
+        <input type="text" class="form-control" #idvacunas>
+    </div>
+    <div class="mb-3">
+        <label for="articlebody" class="form-label">Nombre Vacuna</label>
+        <input type="text" class="form-control" #nombre_vacuna>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Descripcion Vacuna</label>
+        <input type="text" class="form-control" #descripcion_vacuna>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Precio Vacuna</label>
+        <input type="text" class="form-control" #precio_vacuna>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Id Servicio</label>
+        <input type="text" class="form-control" #servicios_idservicios>
+    </div>
+    <div>
+        <button type="button" class="btn btn-success"
+        (click)="add(idvacunas.value, nombre_vacuna.value,
+        descripcion_vacuna.value,precio_vacuna.value,servicios_idservicios.value); idvacunas.value=''; nombre_vacuna.value='';
+        descripcion_vacuna.value='';precio_vacuna.value='';servicios_idservicios.value=''">Agregar</button>
+    </div>
+     
+        
+    </div>

@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="mb-3">
+        <label for="articletitle" class="form-label">Id Examen</label>
+        <input type="text" class="form-control" #idexamen>
+    </div>
+    <div class="mb-3">
+        <label for="articlebody" class="form-label">Nombre Examen</label>
+        <input type="text" class="form-control" #nombre_examenes>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Descripcion Examen</label>
+        <input type="text" class="form-control" #descripcion_examen>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Precio Examen</label>
+        <input type="text" class="form-control" #precio_examenes>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Id Examen</label>
+        <input type="text" class="form-control" #servicios_idservicios>
+    </div>
+    <div>
+        <button type="button" class="btn btn-success"
+        (click)="add(idexamen.value, nombre_examenes.value,
+        descripcion_examen.value,precio_examenes.value,servicios_idservicios.value); idexamen.value=''; nombre_examenes.value='';
+        descripcion_examen.value='';precio_examenes.value='';servicios_idservicios.value=''">Agregar</button>
+    </div>
+     
+        
+    </div>

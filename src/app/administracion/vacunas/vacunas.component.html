@@ -1,0 +1,50 @@
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-especializaciones">Especializaciones</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-vacunas">Vacunas</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-medicamentos">Medicamentos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-examenes">Examenes Medicos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-servicios">Servicios</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/exel">Ventas</a>
+  </li>
+</ul>
+
+
+<div class="container mt-5">
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <th>Id vacuna</th>
+        <th>Nombre Vacuna</th>
+        <th>Descripcion Vacuna</th>
+        <th>Precio Vacuna</th>
+        <th>Id sevicio</th>
+      </thead>
+    <tbody *ngIf="vacunas.length">
+      <tr *ngFor="let vacuna of vacunas">
+        <td>{{ vacuna.idvacunas }}</td>
+        <td>{{ vacuna.nombre_vacuna }}</td>
+        <td>{{ vacuna.descripcion_vacuna}}</td>
+        <td>{{ vacuna.precio_vacuna}}</td>
+        <td>{{ vacuna.servicios_idservicios}}</td>
+        <td><button class="btn btn-info" routerLink="/edit-vacunas/{{vacuna.idvacunas}}"
+        >Editar</button>&nbsp;<button class="btn btn-danger" (click)="deleteVacuna(vacuna.idvacunas)">Eliminar</button></td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    <!-- Botón para crear nuevo artículo -->
+    <div>
+    <button class="btn btn-primary" routerLink="/add-admin-vacunas">Agregar Nueva Vacuna</button>
+    </div>
+</div>

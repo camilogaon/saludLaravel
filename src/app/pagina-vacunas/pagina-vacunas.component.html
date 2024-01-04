@@ -1,0 +1,58 @@
+
+<style>
+    header.jumbotron {
+    position: relative;
+    background: url('assets/vacunacion.jpg') center/cover no-repeat;
+    min-height: 500px; /* Ajusta la altura deseada de la imagen */
+    color: #fff; /* Color de texto en el encabezado */
+  }
+</style>
+
+
+  <!-- Encabezado de la página -->
+  <header class="jumbotron jumbotron-fluid img-overlay">
+    <div class="overlay"></div>
+    <div class="header-content">
+        
+      <h1 class="display-4 fw-semibold">¡Bienvenido a nuestros servicios médicos a domicilio!</h1>
+      <p class="lead">Ofrecemos atención médica de calidad en la comodidad de tu hogar.</p>
+    </div>
+  </header>
+
+  <!-- Sección de Información -->
+  <section class="container my-5">
+    <h2 class="text-center">¿Por qué elegir nuestros servicios médicos a domicilio?</h2>
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <h3>Comodidad y Conveniencia</h3>
+        <p>Nuestro equipo de profesionales de la salud te atenderá en tu hogar, evitando desplazamientos innecesarios y esperas en la sala de espera.</p>
+      </div>
+      <div class="col-md-6 mt-5">
+        <h3>Atención Personalizada</h3> 
+        <p>Brindamos una atención médica personalizada y dedicada a tus necesidades específicas.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mt-4">
+
+    <div class="alert alert-success" *ngIf="showAlert" role="alert">
+      ¡Producto agregado al carrito!
+  </div>
+
+    <div class="row" >
+      <div class="col-md-4 mb-4" *ngFor="let vacuna of vacunas">
+        <div class="card" style="border-radius: 7%;">
+          <div class="card-body" >
+            <h5 class="card-title fw-bold">{{ vacuna.nombre_vacuna }}</h5>
+            <p class="card-text">{{ vacuna.descripcion_vacuna }}</p>
+            <p class="card-text">Precio: ${{ vacuna.precio_vacuna }}</p>
+            <a  class="btn btn-primary" (click)="pressbutton(vacuna.nombre_vacuna,vacuna.idvacunas,vacuna.precio_vacuna)">Agregar al Carrito  <i class="bi bi-cart-check"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+

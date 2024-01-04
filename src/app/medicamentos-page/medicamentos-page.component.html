@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <div class="alert alert-success" *ngIf="showAlert" role="alert">
+    ¡Producto agregado al carrito!
+</div>
+    <div class="row" >
+      <div class="col-md-4 mb-4" *ngFor="let medicamento of medicamentos">
+        <div class="card" style="border-radius: 7%;">
+          <div class="card-body" >
+            <h5 class="card-title">{{ medicamento.nombre_medicamento }}</h5>
+            <p class="card-text">{{ medicamento.descripcion_medicamento }}</p>
+            <p class="card-text">Precio: ${{ medicamento.precio_medicamento }}</p>
+            <a  class="btn btn-primary" (click)="pressbutton(medicamento.nombre_medicamento,medicamento.idmedicamentos,medicamento.precio_medicamento)">Agregar al Carrito  <i class="bi bi-cart-check"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

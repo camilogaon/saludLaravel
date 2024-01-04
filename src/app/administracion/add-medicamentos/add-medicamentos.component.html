@@ -1,0 +1,31 @@
+<div class="container">
+
+<div class="mb-3">
+    <label for="articletitle" class="form-label">Id Medicamento</label>
+    <input type="text" class="form-control" #idmedicamentos>
+</div>
+<div class="mb-3">
+    <label for="articlebody" class="form-label">Nombre Medicamento</label>
+    <input type="text" class="form-control" #nombre_medicamento>
+</div>
+<div class="mb-3">
+    <label for="articleauthor" class="form-label">Descripcion Medicamento</label>
+    <input type="text" class="form-control" #descripcion_medicamento>
+</div>
+<div class="mb-3">
+    <label for="articleauthor" class="form-label">Precio Medicamento</label>
+    <input type="text" class="form-control" #precio_medicamento>
+</div>
+<div class="mb-3">
+    <label for="articleauthor" class="form-label">Id Servicio</label>
+    <input type="text" class="form-control" #servicios_idservicios>
+</div>
+<div>
+    <button type="button" class="btn btn-success"
+    (click)="add(idmedicamentos.value, nombre_medicamento.value,
+    descripcion_medicamento.value,precio_medicamento.value,servicios_idservicios.value); idmedicamentos.value=''; nombre_medicamento.value='';
+    descripcion_medicamento.value='';precio_medicamento.value='';servicios_idservicios.value=''">Agregar</button>
+</div>
+ 
+    
+</div>

@@ -1,0 +1,30 @@
+
+
+<div class="container">
+    <div class="mb-3">
+        <label for="articletitle" class="form-label">Id Especializacion</label>
+        <input type="text" class="form-control" [(ngModel)]="especializacion.idespecializaciones" #idespecializaciones>
+    </div>
+    <div class="mb-3">
+        <label for="articlebody" class="form-label">Nombre Especializacion</label>
+        <input type="text" class="form-control" [(ngModel)]="especializacion.nombre_especializacion" #nombre_especializacion>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Descripcion Especializacion</label>
+        <input type="text" class="form-control" [(ngModel)]="especializacion.descripcion_especializacion" #descripcion_especializacion>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Precio Especializacion</label>
+        <input type="text" class="form-control" [(ngModel)]="especializacion.precio_especializacion" #precio_especializacion>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Id Servicio</label>
+        <input type="text" class="form-control" [(ngModel)]="especializacion.servicios_idservicios" #servicios_idservicios>
+    </div>
+    <div class="mt-3">
+        <button type="button" class="btn btn-success"
+        (click)="update(idespecializaciones.value, nombre_especializacion.value,
+        descripcion_especializacion.value,precio_especializacion.value,servicios_idservicios.value); ">Actualizar</button>
+    </div>
+</div>
+

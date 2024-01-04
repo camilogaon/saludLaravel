@@ -1,0 +1,12 @@
+
+<h1>pagina prueba</h1>
+<!-- pagina-registrarse.component.html -->
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" formControlName="nombre" required>
+
+  <label for="apellido">Apellido:</label>
+  <input type="text" id="apellido" formControlName="apellido" required>
+
+  <button type="submit">Crear Usuario</button>
+</form>

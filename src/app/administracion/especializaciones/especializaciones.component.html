@@ -1,0 +1,52 @@
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-especializaciones">Especializaciones</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-vacunas">Vacunas</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-medicamentos">Medicamentos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-examenes">Examenes Medicos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-servicios">Servicios</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/exel">Ventas</a>
+  </li>
+</ul>
+
+
+<div class="container">
+<div>
+  <table class="table table-striped">
+    <thead>
+      <th>Id Especializacion</th>
+      <th>Nombre Especializacion</th>
+      <th>Descripcion Especializacion</th>
+      <th>Precio Especializacion</th>
+      <th>Servicios_idservicios</th>
+    </thead>
+  <tbody *ngIf="especializaciones.length">
+    <tr *ngFor="let especializacion of especializaciones">
+      <td>{{ especializacion.idespecializaciones }}</td>
+      <td>{{ especializacion.nombre_especializacion }}</td>
+      <td>{{ especializacion.descripcion_especializacion}}</td>
+      <td>{{ especializacion.precio_especializacion}}</td>
+      <td>{{ especializacion.servicios_idservicios}}</td>
+      <td><button class="btn btn-info" routerLink="/edit-especializaciones/{{especializacion.idespecializaciones}}"
+      >Editar</button>&nbsp;<button class="btn btn-danger" (click)="deleteEspecializacion(especializacion.idespecializaciones)">Eliminar</button></td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+
+  <!-- Botón para crear nuevo artículo -->
+  <div>
+    <button class="btn btn-primary" routerLink="/add-admin-especializaciones"> Agregar Especializacion</button>
+  </div>
+  
+</div>

@@ -1,0 +1,26 @@
+
+
+<div class="text-bg-dark">
+    <img src="assets/examenes.jpg" class="card-img img-fluid" alt="...">
+  </div>
+    
+  
+  <div class="container mt-4">
+
+    <div class="alert alert-success" *ngIf="showAlert" role="alert">
+      ¡Producto agregado al carrito!
+  </div>
+
+    <div class="row" >
+      <div class="col-md-4 mb-4" *ngFor="let examen of examenes">
+        <div class="card" style="border-radius: 7%;">
+          <div class="card-body" >
+            <h5 class="card-title">{{ examen.nombre_examenes }}</h5>
+            <p class="card-text">{{ examen.descripcion_examen }}</p>
+            <p class="card-text">Precio: ${{ examen.precio_examenes }}</p>
+            <a  class="btn btn-primary" (click)="pressbutton(examen.nombre_examenes,examen.idexamen,examen.precio_examenes)">Agregar al Carrito  <i class="bi bi-cart-check"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

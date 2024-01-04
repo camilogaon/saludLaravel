@@ -1,0 +1,32 @@
+<div class="container">
+
+
+    <div class="mb-3">
+        <label for="articletitle" class="form-label">Id Examen</label>
+        <input type="text" class="form-control" [(ngModel)]="examen.idexamen" #idexamen>
+    </div>
+    <div class="mb-3">
+        <label for="articlebody" class="form-label">Nombre Examen</label>
+        <input type="text" class="form-control" [(ngModel)]="examen.nombre_examenes" #nombre_examenes>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Descripcion Examen</label>
+        <input type="text" class="form-control" [(ngModel)]="examen.descripcion_examen" #descripcion_examen>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Precio Examen</label>
+        <input type="text" class="form-control" [(ngModel)]="examen.precio_examen" #precio_examen>
+    </div>
+    <div class="mb-3">
+        <label for="articleauthor" class="form-label">Id Examen</label>
+        <input type="text" class="form-control"[(ngModel)]="examen.servicios_idservicios" #servicios_idservicios>
+    </div>
+    
+    <div>
+        <button type="button" class="btn btn-success"
+        (click)="update(idexamen.value, nombre_examenes.value,
+        descripcion_examen.value,precio_examen.value,servicios_idservicios.value); ">Actualizar</button>
+    </div>
+    
+        
+    </div>

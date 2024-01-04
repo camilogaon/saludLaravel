@@ -1,0 +1,29 @@
+
+<div class="container">
+<div class="mb-3">
+    <label for="articletitle" class="form-label">Id Especializacion</label>
+    <input type="text" class="form-control" #idespecializaciones>
+</div>
+<div class="mb-3">
+    <label for="articlebody" class="form-label">Nombre Especializacion</label>
+    <input type="text" class="form-control" #nombre_especializacion>
+</div>
+<div class="mb-3">
+    <label for="articleauthor" class="form-label">Descripcion Especializacion</label>
+    <input type="text" class="form-control" #descripcion_especializacion>
+</div>
+<div class="mb-3">
+    <label for="articleauthor" class="form-label">Precio Especializacion</label>
+    <input type="text" class="form-control" #precio_especializacion>
+</div>
+<div class="mb-3">
+    <label for="articleauthor" class="form-label">Id Servicio</label>
+    <input type="text" class="form-control" #servicios_idservicios>
+</div>
+<div>
+    <button type="button" class="btn btn-success"
+    (click)="add(idespecializaciones.value, nombre_especializacion.value,
+    descripcion_especializacion.value,precio_especializacion.value,servicios_idservicios.value); idespecializaciones.value=''; nombre_especializacion.value='';
+    descripcion_especializacion.value='';precio_especializacion.value='';servicios_idservicios.value=''">Agregar</button>
+</div>
+</div>

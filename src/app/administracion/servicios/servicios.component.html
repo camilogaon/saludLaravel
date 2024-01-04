@@ -1,0 +1,47 @@
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-especializaciones">Especializaciones</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-vacunas">Vacunas</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-medicamentos">Medicamentos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-examenes">Examenes Medicos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin-servicios">Servicios</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/exel">Ventas</a>
+  </li>
+</ul>
+
+
+<div class="container">
+<div class="mt-5 ">
+    <table class="table table-striped">
+    <thead>
+        <th>Id</th>
+        <th>Nombre Servicio</th>
+        <th>Descripcion Servicio</th>
+    </thead>
+    <tbody *ngIf="servicios.length">
+        <tr *ngFor="let servicio of servicios">
+        <td>{{ servicio.idservicios }}</td>
+        <td>{{ servicio.nom_servicio }}</td>
+        <td>{{ servicio.descripcion_servicio}}</td>
+        <td><button class="btn btn-info" routerLink="/edit-servicios/{{servicio.idservicios}}">Editar</button>&nbsp;<button class="btn btn-danger" (click)="deleteServicio(servicio.idservicios)">Eliminar</button></td>
+        </tr>
+    </tbody>
+    </table>
+
+    </div>
+    <!-- Botón para crear nuevo artículo -->
+    <div>
+    <button class="btn btn-primary" routerLink="/add-admin-servicios">Añadir Nuevo Servicio</button>
+    </div>
+</div>
+    

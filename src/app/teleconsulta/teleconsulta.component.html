@@ -1,0 +1,19 @@
+  
+  <div class="container mt-4">
+
+    <div class="alert alert-success" *ngIf="showAlert" role="alert">
+      ¡Producto agregado al carrito!
+  </div>
+    <div class="row" >
+      <div class="col-md-4 mb-4" *ngFor="let especializacion of especializaciones">
+        <div class="card" style="border-radius: 7%;">
+          <div class="card-body" >
+            <h5 class="card-title">{{ especializacion.nombre_especializacion }}</h5>
+            <p class="card-text">{{ especializacion.descripcion_especializacion }}</p>
+            <p class="card-text">Precio: ${{ especializacion.precio_especializacion }}</p>
+            <a  class="btn btn-primary" (click)="pressbutton(especializacion.nombre_especializacion,especializacion.idespecializaciones,especializacion.precio_especializacion)">Agregar al Carrito  <i class="bi bi-cart-check"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

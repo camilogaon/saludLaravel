@@ -1,0 +1,38 @@
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin-servicios">Servicios</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin-especializaciones">Especializaciones</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin-vacunas">Vacunas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin-examenes">Examenes Medicos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/admin-medicamentos">Medicamentos</a>
+    </li>
+</ul>
+
+<div class="container mt-5">
+<div class="mb-3">
+    <label for="articletitle" class="form-label">Id Servicio</label>
+    <input type="text" class="form-control" #idservicios>
+</div>
+<div class="mb-3">
+    <label for="articlebody" class="form-label">Nombre Servicio</label>
+    <input type="text" class="form-control" #nom_servicio>
+</div>
+<div class="mb-3">
+    <label for="articleauthor" class="form-label">Descripcion Servicio</label>
+    <input type="text" class="form-control" #descripcion_servicio>
+</div>
+<div>
+    <button type="button" class="btn btn-success"
+    (click)="add(idservicios.value, nom_servicio.value,
+    descripcion_servicio.value); idservicios.value=''; nom_servicio.value='';
+    idservicios.value=''">Add</button> 
+</div>
+</div>

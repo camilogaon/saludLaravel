@@ -1,0 +1,28 @@
+<div class="container">
+<div>
+     
+    <h1>Carrito de comprass</h1><br><br>
+      <table class="table table-striped">
+          <thead>
+              <th>Id</th>
+              <th>Id Producto</th>
+              <th>Nombre Producto</th>
+              <th>Precio producto</th>
+          </thead>
+          <tbody *ngIf="carritos.length">
+              <tr *ngFor="let carrito of carritos">
+                  <td>{{ carrito.id_carrito  }}</td>
+                  <td>{{ carrito.id_servicio }}</td>
+                  <td>{{ carrito.nombre_servicio}}</td>
+                  <td>{{ carrito.precio_servicio}}</td>
+                  <p [style.display]="'none'">ID: {{ users.sub }}</p>
+                  <td><button class="btn btn-danger" (click)="deleteArticle(carrito.id_carrito)"><i class="bi bi-trash"></i></button></td>
+                  <td><button type="button" class="btn btn-success" (click)="add(users.sub,carrito.id_servicio,carrito.id_carrito,carrito.nombre_servicio,carrito.precio_servicio)">Comprar  <i class="bi bi-cash-coin ml"></i></button></td>
+                  
+              </tr>
+              <br>
+          </tbody>
+          
+      </table>
+    </div>
+         </div>
