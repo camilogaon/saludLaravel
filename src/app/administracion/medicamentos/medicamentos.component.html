@@ -36,7 +36,8 @@
         <td>{{ medicamento.precio_medicamento}}</td>
         <td>{{ medicamento.servicios_idservicios}}</td>
         <td><button class="btn btn-info" routerLink="/edit-medicamentos/{{medicamento.idmedicamentos}}"
-        >Edit</button>&nbsp;<button class="btn btn-danger" (click)="deleteMedicamento(medicamento.idmedicamentos)">Delete</button></td>
+        ><i class="bi bi-pencil"></i></button>&nbsp;<button class="btn btn-danger" (click)="deleteMedicamento(medicamento.idmedicamentos)"><i class="bi bi-trash"></i>
+        </button></td>
       </tr>
     </tbody>
   </table>

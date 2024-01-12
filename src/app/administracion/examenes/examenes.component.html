@@ -37,7 +37,8 @@
         <td>{{ examen.precio_examenes}}</td>
         <td>{{ examen.servicios_idservicios}}</td>
         <td><button class="btn btn-info" routerLink="/edit-admin-examenes/{{examen.idexamen}}"
-        >Editar</button>&nbsp;<button class="btn btn-danger" (click)="deleteExamen(examen.idexamen)">Eliminar</button></td>
+        ><i class="bi bi-pencil"></i></button>&nbsp;<button class="btn btn-danger" (click)="deleteExamen(examen.idexamen)"><i class="bi bi-trash"></i>
+        </button></td>
         </tr>
     </tbody>
     </table>

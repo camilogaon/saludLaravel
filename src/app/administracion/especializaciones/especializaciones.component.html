@@ -38,7 +38,8 @@
       <td>{{ especializacion.precio_especializacion}}</td>
       <td>{{ especializacion.servicios_idservicios}}</td>
       <td><button class="btn btn-info" routerLink="/edit-especializaciones/{{especializacion.idespecializaciones}}"
-      >Editar</button>&nbsp;<button class="btn btn-danger" (click)="deleteEspecializacion(especializacion.idespecializaciones)">Eliminar</button></td>
+      ><i class="bi bi-pencil"></i></button>&nbsp;<button class="btn btn-danger" (click)="deleteEspecializacion(especializacion.idespecializaciones)"><i class="bi bi-trash"></i>
+      </button></td>
     </tr>
   </tbody>
   </table>

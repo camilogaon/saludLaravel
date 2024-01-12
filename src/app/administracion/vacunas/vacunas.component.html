@@ -38,7 +38,8 @@
         <td>{{ vacuna.precio_vacuna}}</td>
         <td>{{ vacuna.servicios_idservicios}}</td>
         <td><button class="btn btn-info" routerLink="/edit-vacunas/{{vacuna.idvacunas}}"
-        >Editar</button>&nbsp;<button class="btn btn-danger" (click)="deleteVacuna(vacuna.idvacunas)">Eliminar</button></td>
+        ><i class="bi bi-pencil"></i></button>&nbsp;<button class="btn btn-danger" (click)="deleteVacuna(vacuna.idvacunas)"><i class="bi bi-trash"></i>
+        </button></td>
         </tr>
     </tbody>
     </table>
